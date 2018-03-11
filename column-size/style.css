@@ -1,0 +1,63 @@
+/* Grid Container: Elemeno padre con display: grid
+   Grid item: elemento hijo directo de un grid container.
+   Grid line: Lineas divisoras horizontales y verticales.
+   Grid Track: Filas y columnas
+   Grid Cell: Espacio entre dos lineas verticales adayacentes y dso lineas horizontales adyacentes.
+   Grid Area: Espacio rodeado por 4 frid lines.
+   */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.grid_container{
+  display: grid;
+  grid-template: repeat(2, 1fr)/ repeat(7, 1fr);
+  grid-gap: 10px;
+  height: 40vh;
+  
+}
+
+.grid_item{
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+
+.grid_item:nth-of-type(1){
+  background-color: lightcoral;
+/* grid-column-start: 1;
+   grid-column-end: 3;*/
+/* grid-column: start / end El inicio y el final representan el numero de linea, no de celda.*
+/* grid-row: start / end; */
+
+  grid-column: span 3; /* Esto es lo mismo que poner 1 / span 3. Grid layoout toma la primera linea disponible, y por ser el primer elemento tomo el 1*/
+  grid-row: 1 / -1;
+}
+
+.grid_item:nth-of-type(2){
+  background-color: lightgreen;
+  grid-column: span 2;
+  grid-row: 1 / -1; /*  El -1 se usa para que abarque hasta la ultima linea.*/
+}
+
+.grid_item:nth-of-type(3){
+  background-color: lightyellow;
+  grid-column: span 2; /* span 2 idica que abarque hasta dos lineas */
+}
+
+/*.grid_item:nth-of-type(4){
+  background-color: lightgray;
+  grid-column: 6 / 7;
+  grid-row: 2 / -1;
+}
+
+.grid_item:nth-of-type(5){
+  background-color: peru;
+  grid-column: 7 / 8;
+  grid-row: 2 / -1;
+}*/
+
+

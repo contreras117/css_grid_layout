@@ -8,6 +8,7 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .grid_container{
@@ -20,6 +21,21 @@ body{
   grid-row-gap: 20px; /* Margen entre renglones */
   /* grid-gap: filas columnas */
   grid-gap: 10px 100px;
+
+}
+
+.grid_container_2{
+  display: grid;
+  grid-template: 300px 20vh 200px 10vh / repeat(4, minmax(150px, 1fr));
+  grid-gap: 10px;
+
+  /* repeat(n, x) es una funcion que  repite n veces el valor x
+   minmax(min, max) es una funcion que establece el valor minimo y maximo de un atributo
+   La unidad fr divide el espeacio no asignado por unidades fijas y lo divide entre la cantidad de fr's asiganados. Ejemplo 2fr 4fr 3fr 1fr dividiria en 2/9 4/9 3/9 1/9
+   fr solo se puede usar distro de elementos con display grid.
+   */
+
+
 }
 
 .grid_item{
