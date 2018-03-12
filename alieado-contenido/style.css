@@ -1,0 +1,32 @@
+/* Grid Container: Elemeno padre con display: grid
+   Grid item: elemento hijo directo de un grid container.
+   Grid line: Lineas divisoras horizontales y verticales.
+   Grid Track: Filas y columnas
+   Grid Cell: Espacio entre dos lineas verticales adayacentes y dso lineas horizontales adyacentes.
+   Grid Area: Espacio rodeado por 4 frid lines.
+   */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.grid_container{
+  display: grid;
+  grid-template: repeat(4, 150px) / repeat(3, 200px);
+  grid-gap: 10px;
+  height: 100vh;
+  /* justify-content: start center end stretch space-around space-between space-evenly; */
+  justify-content: space-evenly;
+  /* align-content: start center end stretch space-around space-between space-ebenly */
+  align-content: end;
+
+  /* space-evenly distribuye un espacio igual entre todos los elementos */
+
+}
+
+.grid_item{
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+}
