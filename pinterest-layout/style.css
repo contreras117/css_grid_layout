@@ -1,0 +1,33 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.grid-item{
+  border-radius: 5px;
+  padding: 10px;
+  background: #f2f2f2;
+}
+
+.grid-item img{
+  max-width: 100%;
+}
+
+.level-1{
+  grid-row: span 3;
+}
+
+.level-2{
+  grid-row: span 2;
+}
+
+.level-3{
+  grid-row: span 1;
+}
